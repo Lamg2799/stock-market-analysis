@@ -29,6 +29,7 @@ def get_account_position_names(driver):
         A list of position names as strings that are held by a questrade account.
     """
     driver.get(AUTH_URI)
+    # 3 minutes for user to authenticate
     WebDriverWait(driver, 180).until(EC.url_contains(REDIRECT_URL + "/#"))
     parsed_url_data = parse_qs(urlparse(driver.current_url).fragment)
 
