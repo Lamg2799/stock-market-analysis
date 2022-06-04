@@ -15,11 +15,11 @@ class Sentiment(str, Enum):
     """
     Contains members which represent different sentiments from very positive to very negative.
     """
-    good = 'This stock has good market sentiment currently.'
-    average = 'This stock has mixed opinions about it currently.'
-    great = 'This stock has been receiving great feedback from the market and has great news, there is no need to worry about this stock right now.'
-    bad = 'The stock has had bad market sentiment recently, you should review your position when you get the chance.'
-    terrible = 'The market sentiment is terrible for this stock recently, you should review this stock position closely ASAP.'
+    good = 'This stock has good market sentiment currently'
+    average = 'This stock has mixed opinions about it currently'
+    great = 'This stock has been receiving great feedback from the market and has great news, there is no need to worry about this stock right now'
+    bad = 'The stock has had bad market sentiment recently, you should review your position when you get the chance'
+    terrible = 'The market sentiment is terrible for this stock recently, you should review this stock position closely ASAP'
 
 def print_sentiment_message(symbol, positive_sentiment_percentage, number_of_predictions):
     """
