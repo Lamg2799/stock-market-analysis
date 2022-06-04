@@ -30,7 +30,9 @@ def print_sentiment_message(symbol, positive_sentiment_percentage, number_of_pre
         positive_sentiment_percentage: An integer between 0 and 100 representing the percentage of positive sentiment.
         number_of_predictions: The total number of predictions made for this stock symbol.
     """
-    if positive_sentiment_percentage < 20:
+    if number_of_predictions == 0:
+        print(symbol, 'Could not find any articles for this symbol.')
+    elif positive_sentiment_percentage < 20:
         print(symbol, Sentiment.terrible.value + ': (Recommendation based on ' + str(number_of_predictions) + ' article(s)).\n')
     elif positive_sentiment_percentage < 40:
         print(symbol, Sentiment.bad.value + ': (Recommendation based on ' + str(number_of_predictions) + ' article(s)).\n')

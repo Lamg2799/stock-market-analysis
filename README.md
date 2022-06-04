@@ -49,7 +49,7 @@ provides recommendations for further analysis using machine learning.
     and retrieve the APP_ID by clicking on the app.
     - QUESTRADE_ACCOUNT_ID: Log in, and view your account number and provide the prefix before "-".
 - Install requirements.txt (pip3 install -r requirements.txt).
-- Run (python3 main.py).
+- Run (python3 ./src/main.py).
 - Provide the application access to your Questrade account through the webbrowser that the application invokes.
 - Check the terminal for your recommendations!
 
