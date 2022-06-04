@@ -9,12 +9,12 @@ from selenium.webdriver.support import expected_conditions as EC
 try:
     load_dotenv()
     QUESTRADE_APP_ID = os.getenv('QUESTRADE_APP_ID')
-    QUESTRADE_GRANT_SERVER = os.getenv('QUESTRADE_GRANT_SERVER')
     QUESTRADE_ACCOUNT_ID = os.getenv('QUESTRADE_ACCOUNT_ID')
 except Exception as e:
     print('Could not retrieve Questrade details from .env file.')
     exit()
 
+QUESTRADE_GRANT_SERVER = 'https://login.questrade.com/oauth2/authorize'
 REDIRECT_URL = 'https://www.example.com'
 AUTH_URI = QUESTRADE_GRANT_SERVER + '?client_id=' + QUESTRADE_APP_ID + '&response_type=token&redirect_uri=' + REDIRECT_URL
 
