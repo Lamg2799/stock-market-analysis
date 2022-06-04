@@ -9,10 +9,10 @@ provides recommendations for further analysis using machine learning.
 
 - Authenticates users and accesses data for their account using the Questrade REST api (https://www.questrade.com/api) and requests.
 - Webscrapes news from Yahoo Finance (https://ca.finance.yahoo.com/) using Selenium and BeautifulSoup.
-- Predicts the sentiment of an article (positive or negative) using a Naive Bayes machine learning algorithm (Code located in ./sentiment_analysis.ipynb).
+- Predicts the sentiment of an article (positive or negative) using a Naive Bayes machine learning algorithm (Code located in ./src/sentiment_analysis.ipynb).
     - I used datasets specific to the stock market as I thought this would provide a unique and applicable dataset to this problem. Due to this, the data
     was not of the highest quality, but sufficed for this personal project. I would love to use better data to help improve the algorithm.
-    - The model was trained using the datasets in ./datasets (Contained about 10,500 entries after filtering): 
+    - The model was trained using the datasets in ./src/model/datasets (Contained about 10,500 entries after filtering): 
         - https://www.kaggle.com/datasets/sbhatti/financial-sentiment-analysis
         - https://www.kaggle.com/datasets/ankurzing/sentiment-analysis-for-financial-news
         - https://www.kaggle.com/datasets/yash612/stockmarket-sentiment-dataset
@@ -49,7 +49,8 @@ provides recommendations for further analysis using machine learning.
     Questrade account (https://www.questrade.com/api/documentation/getting-started) and retrieve the APP_ID by clicking on the app.
     - QUESTRADE_ACCOUNT_ID: Log in, and view your account number under 'Account Management' and provide the prefix before "-".
 - Install requirements.txt (pip3 install -r requirements.txt).
-- Run (python3 ./src/main.py).
+- Navigate to ./src
+- Run (python3 main.py).
 - Provide the application access to your Questrade account through the webbrowser that the application invokes.
 - Check the terminal for your recommendations!
 
