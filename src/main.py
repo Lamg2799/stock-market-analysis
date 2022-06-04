@@ -31,15 +31,15 @@ def print_sentiment_message(symbol, positive_sentiment_percentage, number_of_pre
         number_of_predictions: The total number of predictions made for this stock symbol.
     """
     if positive_sentiment_percentage < 20:
-        print(symbol, Sentiment.terrible.value + ' (Recommendation based on ' + str(number_of_predictions) + ' articles).\n')
+        print(symbol, Sentiment.terrible.value + ': (Recommendation based on ' + str(number_of_predictions) + ' article(s)).\n')
     elif positive_sentiment_percentage < 40:
-        print(symbol, Sentiment.bad.value + ' (Recommendation based on ' + str(number_of_predictions) + ' articles).\n')
+        print(symbol, Sentiment.bad.value + ': (Recommendation based on ' + str(number_of_predictions) + ' article(s)).\n')
     elif positive_sentiment_percentage < 60:
-        print(symbol, Sentiment.average.value + ' (Recommendation based on ' + str(number_of_predictions) + ' articles).\n')
+        print(symbol, Sentiment.average.value + ': (Recommendation based on ' + str(number_of_predictions) + ' article(s)).\n')
     elif positive_sentiment_percentage < 80:
-        print(symbol, Sentiment.good.value + ' (Recommendation based on ' + str(number_of_predictions) + ' articles).\n')
+        print(symbol, Sentiment.good.value + ': (Recommendation based on ' + str(number_of_predictions) + ' article(s)).\n')
     else:
-        print(symbol, Sentiment.great.value + ' (Recommendation based on ' + str(number_of_predictions) + ' articles).\n')
+        print(symbol, Sentiment.great.value + ': (Recommendation based on ' + str(number_of_predictions) + ' article(s)).\n')
 
 def animate_scraping():
     """
@@ -54,7 +54,7 @@ def animate_scraping():
         time.sleep(0.1)
     sys.stdout.flush()
     sys.stdout.write('Scraped relevant news data\n')
-    sys.stdout.write('\nMarket sentiment for positions in your Questrade account:\n')
+    sys.stdout.write('\nMarket sentiment for positions in your Questrade account:\n\n')
 
 
 def main():
@@ -68,6 +68,7 @@ def main():
     # Animation while webscraping occurs
     t = threading.Thread(target=animate_scraping, daemon=True)
     t.start()
+    driver.minimize_window()
     stock_news_dict = scraper.parse_stock_news(driver, position_names)
     driver.close()
     global done_scraping

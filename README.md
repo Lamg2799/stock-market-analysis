@@ -58,3 +58,4 @@ provides recommendations for further analysis using machine learning.
 - Create more sophisticated algorithms selecting relevant articles, parsing valid text, etc.
 - Automatic Questrade login.
 - Improve machine learning model and potentially include neutral sentiment (data did not permit this with appropriate scores).
+- Add more testcases and error handling.

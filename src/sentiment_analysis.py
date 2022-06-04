@@ -4,7 +4,7 @@ import string
 import pickle
 import spacy
 
-MODEL_FILE_NAME = 'model.pkl'
+MODEL_FILE_PATH = './model/model.pkl'
 
 def clean_sentence(sentence):
     """
@@ -59,10 +59,10 @@ def predict_sentences(sentences):
     """
     # Work done in sentiment_analysis.ipynb. Model and count vectorizer imported here.
     try:
-        with open(MODEL_FILE_NAME, 'rb') as f:
+        with open(MODEL_FILE_PATH, 'rb') as f:
             clf, count_vect = pickle.load(f)
     except FileNotFoundError:
-        print(MODEL_FILE_NAME + ' was not found in this directory.')
+        print(MODEL_FILE_PATH + ' was not found in this directory.')
         exit()
     except Exception as e: 
         print('An error has occurred while attempting to retrieve the model and count vectorizer: ', e)
