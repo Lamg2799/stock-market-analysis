@@ -1,5 +1,7 @@
 # Stock Analysis App
 
+### Samples images are available in the sample-images folder
+
 ## Description
 
 - Retrieves stock positions for a Questrade clients account, webscrapes news related to these positions and 
