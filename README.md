@@ -47,7 +47,7 @@ provides recommendations for further analysis using machine learning.
 - Fill in the provided .env template file with the private information required.
     - QUESTRADE_APP_ID: Log in, click on your profile, access the "App Hub" and register the app under your 
     Questrade account (https://www.questrade.com/api/documentation/getting-started) and retrieve the APP_ID by clicking on the app.
-    - QUESTRADE_ACCOUNT_ID: Log in, and view your account number under 'Account Management' and provide the prefix before "-".
+    - QUESTRADE_ACCOUNT_ID: Log in, and view your account number under "Account Management" and provide the prefix before "-".
 - Install requirements.txt (pip3 install -r requirements.txt).
 - Navigate to ./src
 - Run (python3 main.py).
