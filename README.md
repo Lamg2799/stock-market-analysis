@@ -12,8 +12,8 @@ provides recommendations for further analysis using machine learning.
 - Authenticates users and accesses data for their account using the Questrade REST api (https://www.questrade.com/api) and requests.
 - Webscrapes news from Yahoo Finance (https://ca.finance.yahoo.com/) using Selenium and BeautifulSoup.
 - Predicts the sentiment of an article (positive or negative) using a Naive Bayes machine learning algorithm (Code located in ./src/sentiment_analysis.ipynb).
-    - I used datasets specific to the stock market as I thought this would provide a unique and applicable dataset to this problem. Due to this, the data
-    was not of the highest quality, but sufficed for this personal project. I would love to use better data to help improve the algorithm.
+    - I used datasets specific to the stock market as I thought this would provide a unique and focused dataset for the machine learning algorithm to learn from. Due to this, the data
+    was not of the highest quality/quantity, but was less general than other data that is available. I would love to use better data to help improve the algorithm.
     - The model was trained using the datasets in ./src/model/datasets (Contained about 10,500 entries after filtering): 
         - https://www.kaggle.com/datasets/sbhatti/financial-sentiment-analysis
         - https://www.kaggle.com/datasets/ankurzing/sentiment-analysis-for-financial-news
